@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텐바이텐 10x10 : 감성채널 감성에너지</title>
+    <link rel="icon" href="resource/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="resource/js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+    <script src="resource/js/script.js"></script>
+    <!-- AOS 라이브러리 불러오기-->
+    <!--
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+    -->
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="resource/css/common.css">    
+    <link rel="stylesheet" href="resource/css/respon.css">
+</head>    
+
+<body>    
+    <div class="page-wrap">   
+        <!-- pc header  -->
+        <header id="header">
+            <div class="top-menu">
+                <div class="inner">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">알림</a></li>
+                        <li><a href="#">주문/배송</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">장바구니</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="header-wrap">
+                <div class="inner">
+                    <!-- logo  -->
+                    <h1 class="logo">
+                        <a href="#"><img src="resource/images/logo.png" alt="10x10"></a>
+                    </h1>
+
+                    <div class="util">
+                        <!-- header service  -->
+                        <div class="header-service">
+                            <ul>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">할인특가</a></li>
+                                <li><a href="#">기획전</a></li>
+                            </ul>
+                        </div>
+            
+                        <!-- search  -->
+                        <div class="search-form">
+                            <form action="#">
+                                <input type="text" placeholder="텐바이텐 다양한 상품을 검색해 보세요">
+                                <button type="submit" class="btn-search">검색</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <nav>
+                    <ul id="gnb">
+                        <li>
+                            <a href="" class="depth1"><span>브랜드</span></a>
+                            <ul class="depth2">
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">사업영역</a></li>
+                                <li><a href="#">인재채용</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="depth1"><span>디자인 문구</span></a>
+                            <ul class="depth2">
+                                <li><a href="#">다이어리/플래너</a></li>
+                                <li><a href="#">노트/메모지</a></li>
+                                <li><a href="#">데코레이션</a></li>
+                                <li><a href="#">필기류</a></li>
+                                <li><a href="#">캐릭터 문구</a></li>
+                                <li><a href="#">미술도구</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="depth1"><span>디지털/가전</span></a>
+                            <ul class="depth2">
+                                <li><a href="#">디지털/핸드폰</a></li>
+                                <li><a href="#">디자인 가전</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="depth1"><span>인테리어</span></a>
+                            <ul class="depth2">
+                                <li><a href="#">가구/수납</a></li>
+                                <li><a href="#">패브릭/생활</a></li>
+                                <li><a href="#">데코/조명</a></li>
+                                <li><a href="#">키친</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="depth1"><span>패션/데코</span></a>
+                            <ul class="depth2">
+                                <li><a href="#">패션의류</a></li>
+                                <li><a href="#">패션잡화</a></li>
+                                <li><a href="#">뷰티</a></li>
+                                <li><a href="#">주얼리/시계 </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="depth1"><span>푸드/애완/취미</span></a>
+                            <ul class="depth2">
+                                <li><a href="#">푸드</a></li>
+                                <li><a href="#">애완용품</a></li>
+                                <li><a href="#">토이/취미</a></li>
+                                <li><a href="#">캠핑</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+         <!-- 모바일 헤더 시작 -->
+         <div class="mHeader">
+            <button type="button" class="openBt">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <h1 class="logo">
+                <a href="#">
+                    <img src="resource/images/logo.png" alt="10x10">
+                </a>
+            </h1>
+        </div>
+
+        <!-- 버튼 누르면 열리는 메뉴영역 -->
+        <div class="mMenuArea">
+            <div class="top">
+                <a href="#" class="loginBt">
+                    <i class="fa-solid fa-user"></i>
+                    <span>로그인</span>
+                </a>
+                <button type="button" class="closeBt">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="links">
+                <a href="#">알림</a>
+                <a href="#">주문/배송</a>
+                <a href="#">고객센터</a>
+                <a href="#">장바구니</a>
+            </div>
+            
+            <!-- 아코디언 메뉴 -->
+            <nav>
+                <ul id="gnb">
+                    <li>
+                        <a href="#" class="depth1">
+                            <span>브랜드</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">사업영역</a></li>
+                            <li><a href="#">인재채용</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1">
+                            <span>디자인 문구</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                        <ul class="depth2">
+                            <li><a href="#">다이어리/플래너</a></li>
+                            <li><a href="#">노트/메모지</a></li>
+                            <li><a href="#">데코레이션</a></li>
+                            <li><a href="#">필기류</a></li>
+                            <li><a href="#">캐릭터 문구</a></li>
+                            <li><a href="#">미술도구</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1"><span>디지털/가전</span><i class="fa-solid fa-plus"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">디지털/핸드폰</a></li>
+                            <li><a href="#">디자인 가전</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1"><span>인테리어</span><i class="fa-solid fa-plus"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">가구/수납</a></li>
+                            <li><a href="#">패브릭/생활</a></li>
+                            <li><a href="#">데코/조명</a></li>
+                            <li><a href="#">키친</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1"><span>패션/데코</span><i class="fa-solid fa-plus"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">패션의류</a></li>
+                            <li><a href="#">패션잡화</a></li>
+                            <li><a href="#">뷰티</a></li>
+                            <li><a href="#">주얼리/시계 </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1"><span>푸드/애완/취미</span><i class="fa-solid fa-plus"></i></a>
+                        <ul class="depth2">
+                            <li><a href="#">푸드</a></li>
+                            <li><a href="#">애완용품</a></li>
+                            <li><a href="#">토이/취미</a></li>
+                            <li><a href="#">캠핑</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 모바일 헤더 끝 -->
+
+        <!-- 퀵메뉴  -->
+        <div class="quick">
+            <ul>
+                <li class="q1">
+                    <a href="#">장바구니</a>
+                </li>
+                <li class="q2">
+                    <a href="#">인스타그램</a>
+                </li>
+                <li class="q3">
+                    <a href="#">카톡상담</a>
+                </li>
+                <li class="recent">
+                    <a href="#">최근본상품</a>
+                </li>
+            </ul>
+            <button type="button" class="quick-button">퀵메뉴 닫기</button>
+        </div>
+
+        <!-- 메인 비주얼 -->     
+        <div id="main_visual" class="page">       
+            <div class="swiper mainSlide">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a href="#"><img src="resource/images/main-slide1.png" alt="슬라이드1"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="resource/images/main-slide2.png" alt="슬라이드2"></a></div>
+                    <div class="swiper-slide"><a href="#"><img src="resource/images/main-slide3.png" alt="슬라이드3"></a></div>
+                    <!-- <div class="swiper-slide"><img src="resource/images/main-slide4.png" alt=""></div> -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    
+        <!-- 브랜드 스토리 -->
+        <section id="sec1" class="sec">
+            <div class="container page">
+                <div class="inner">
+                    <div class="img-box">
+                        <img src="resource/images/sec1-title.png" class="title_img" alt="Enjoy New Trend">
+                        <img src="resource/images/sec1-icon.gif" alt="icon">
+                    </div>
+        
+                    <div class="tit-box">
+                        <h2>색다른 즐거움을 전하는 감성 기업</h2>
+                        <p>텐바이텐은 디자인을 좋아하는 여러분에게 <br>색다른 즐거움을 선사함으로써<br>
+                            일상이 따뜻하고 행복한 경험으로 채워지기를 꿈꿉니다.</p>
+                    </div>
+                    
+                    <div class="btn-wrap">
+                        <a href="#">브랜드 스토리</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section2-세일 상품  -->
+        <section id="sec2"  class="sec">
+            <div class="container page">
+                <div class="inner">
+                    <div class="left-tit-box">
+                       <div class="title">
+                            <h2>Just<br>1DAY</h2>
+                            <strong class="color_red">~75% SALE</strong>
+                       </div>
+
+                        <div class="remain_time">
+                            <div class="timeline">
+                                <span>
+                                    <em></em>
+                                </span>
+                            </div>
+                            <p class="time">남은시간 <span id="countdown">08:20:01</span></p>
+                        </div>
+                    </div>                
+
+                    <ul class="list">    
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="resource/images/sec2-img1.png" alt="스누피 보틀 컵세트">
+                                </div>
+                                <div class="desc">
+                                    <p class="prd_name">[Peanuts] 스누피 보틀 컵세트</p>
+                                    <p class="prd_price">
+                                        <span class="discount color_red">63%</span>
+                                        <span class="sum">29,900원</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="resource/images/sec2-img2.png" alt="코렐 스누피 식기SET 하루특가">
+                                </div>
+                                <div class="desc">
+                                    <p class="prd_name">코렐 스누피 식기SET 하루특가!</p>
+                                    <p class="prd_price">
+                                        <span class="discount color_red">50%</span>
+                                        <span class="sum">38,900원</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="resource/images/sec2-img3.png" alt="자문자답 다이어리 - 50가지 질문">
+                                </div>
+                                <div class="desc">
+                                    <p class="prd_name">자문자답 다이어리 - 50가지 질문</p>
+                                    <p class="prd_price">
+                                        <span class="discount color_red">20%</span>
+                                        <span class="sum">20,500원</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- section3-베스트 상품  -->
+        <section id="sec3"  class="sec">
+            <div class="container page">
+                <div class="inner">
+                    <div class="tit-box">
+                        <h2>Best Item</h2>
+                        <p>10X10의 인기 상품을 만나보세요.</p>
+                    </div>
+
+                    <div class="prd-wrap">                   
+                        <div class="swiper prdSlide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div class="thumb-box">
+                                                <img src="resource/images/sec3-thumb1.png" alt="베스트상품1">
+                                            </div>
+                                            <div class="desc">
+                                                <p class="prd_name">마음이들 네임스티커 팩 (30매)</p>
+                                                <p class="prd_price">
+                                                    <span class="discount color_red">75%</span>
+                                                    <span class="sum">6,300</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>                                    
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div class="thumb-box">
+                                                <img src="resource/images/sec3-thumb2.png" alt="베스트상품1">
+                                            </div>
+                                            <div class="desc">
+                                                <p class="prd_name">2024 나의 꿈 어린이 달력</p>
+                                                <p class="prd_price">
+                                                    <span class="discount color_red">50%</span>
+                                                    <span class="sum">1,300</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>                               
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div class="thumb-box">
+                                                <img src="resource/images/sec3-thumb3.png" alt="베스트상품1">
+                                            </div>
+                                            <div class="desc">
+                                                <p class="prd_name">어린이 초등 우주최강 L홀더 세트</p>
+                                                <p class="prd_price">
+                                                    <span class="discount color_red">20%</span>
+                                                    <span class="sum">5,300</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>                               
+                                </div>                                
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div class="thumb-box">
+                                                <img src="resource/images/sec3-thumb4.png" alt="베스트상품1">
+                                            </div>
+                                            <div class="desc">
+                                                <p class="prd_name">스누피 터치 무드등</p>
+                                                <p class="prd_price">
+                                                    <span class="discount color_red">15%</span>
+                                                    <span class="sum">48,000</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>                             
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="btn-wrap">
+                        <a href="#">더보기</a>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <!-- section4-신규 상품 -->
+        <section id="sec4">
+            <div class="container page">
+                <div class="inner">
+                    <div class="img-deco">                    
+                        <img src="resource/images/arrival-deco-text.svg" alt="">
+                    </div>
+                    <div class="tit-box">
+                        <h2>New Arrival</h2>
+                    </div>
+
+                    <div class="txt-box">
+                        <div class="txt-wrap">
+                            <strong>사랑스런 동물들의 변신!<br>Animal 베이커리</strong>
+                            <p>따끈따끈, 애니멀 피규어 빵 나왔어요!</p>                    
+                        </div>
+
+                        <div class="btn-wrap">
+                            <a href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                    
+                    <div class="img-box">
+                        <img src="resource/images/arrival-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section5-기획전 -->
+        <section id="sec5">
+            <div class="container page">
+                <div class="inner">
+                    <h2>기획전</h2>
+                    <ul class="list">
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="resource/images/sec5-thumb1.png" alt="">
+                                </div>
+                                <div class="txt-box">
+                                    <p class="tit">
+                                        <span>선물같은 상상, 서커스보이밴드</span>
+                                        <span class="color_red">~78%</span>                                    
+                                    </p>
+                                    <p class="txt">잃어버렸던 일상 속 소소한 즐거움을 찾아서</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="resource/images/sec5-thumb2.png" alt="">
+                                </div>
+                                <div class="txt-box">
+                                    <p class="tit">
+                                        <span>귀여운 미피와 함께 즐겁게 공부하자!</span>
+                                        <span class="color_red">~30%</span>                                    
+                                    </p>
+                                    <p class="txt">10x10에서 먼저 만나는 드레텍 미피 스톱워치</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="resource/images/sec5-thumb3.png" alt="">
+                                </div>
+                                <div class="txt-box">
+                                    <p class="tit">
+                                        <span>혜택 빵빵 큐피드 곰 스탬프 세트</span>
+                                        <span class="color_red">~50%</span>                                    
+                                    </p>
+                                    <p class="txt">큐피드 곰 스탬프 세트 구매 시 큐피드 곰톡 증정</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img-box">
+                                    <img src="resource/images/sec5-thumb4.png" alt="">
+                                </div>
+                                <div class="txt-box">
+                                    <p class="tit">
+                                        <span>초등 공부습관 저학년 스터디플래너</span>
+                                        <span class="color_red">~50%</span>                                    
+                                    </p>
+                                    <p class="txt">세계 어린이들을 만날 수 있는 일러스트 표지</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- section6-공지사항 -->
+        <section id="sec6">
+            <div class="container">
+                <div class="scroll_wrap">
+                    <div class="inner">
+                    <!-- <div class="content" data-aos="slide-up" data-aos-duration="500"> -->
+                        <div class="content scroll_on type_bottom">
+                            <div class="lft-tit-box">
+                                <div class="txt-wrap">
+                                    <h3>NOTICE</h3>
+                                    <P>10X10의 새로운 소식을<br> 확인해 보세요</P>
+                                </div>
+                                <div class="btn-wrap">
+                                    <a href="#">자세히 보기</a>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <time>2024-05-02</time>
+                                        <a href="#"><span>2024년 가정의 달 배송안내</span></a>
+                                    </li>
+                                    <li>
+                                        <time>2024-04-19</time>
+                                        <a href="#"><span>내가 모은 초록들 당첨자 발표</span></a>
+                                    </li>
+                                    <li>
+                                        <time>2024-03-21</time>
+                                        <a href="#"><span>다둥이 행복카드 소지고객 할인안내</span></a>
+                                    </li>
+                                    <li>
+                                        <time>2024-03-10</time>
+                                        <a href="#"><span>회원등급별 혜택 안내</span></a>
+                                    </li>
+                                </ul>
+                            </div>                        
+                        </div>                    
+
+                        <!-- 공지사항 배경 AOS 설정 -->
+                        <!-- <div class="notice-bg" data-aos="slide-left" data-aos-duration="000"></div> -->
+                        <div class="notice-bg scroll_on type_right"></div>
+                    </div>
+                </div>
+            </div>            
+        </section>
+
+        <!--section7-sns -->
+        <section id="sec7">
+            <div class="container page">
+                <div class="inner">
+                    <div class="tit-box">
+                        <h2>FOLLOW US</h2>
+                        <p>@your10x10</p>
+                    </div>
+                    <ul class="list scroll_on type_bottom">
+                        <li><a href="https://www.instagram.com/p/C59u9LTvaW-" target="_blank"><img src="resource/images/sec7-thumb1.png" alt="비마이펫"></a></li>
+                        <li><a href="https://www.instagram.com/p/C6Nxo56PeqH/" target="_blank"><img src="resource/images/sec7-thumb2.png" alt="산리오"></a></li>
+                        <li><a href="https://www.instagram.com/p/C5iHN2fvpwA" target="_blank"><img src="resource/images/sec7-thumb3.png" alt="디즈니 아이템"></a></li>
+                        <li><a href="https://www.instagram.com/p/C5hwy95PnE_" target="_blank"><img src="resource/images/sec7-thumb4.png" alt="스누피" ></a></li>
+                        <li><a href="https://www.instagram.com/p/C4-UopnvqXW/" target="_blank"><img src="resource/images/sec7-thumb5.png" alt="스누피 피규어" ></a></li>
+                        <li><a href="https://www.instagram.com/p/C2_QXF2vBsm" target="_blank"><img src="resource/images/sec7-thumb6.png" alt="마시마로 방향제" ></a></li>
+                        <li><a href="https://www.instagram.com/p/C2_PoTLvzi3" target="_blank"><img src="resource/images/sec7-thumb7.png" alt="스탬프" ></a></li>
+                        <li><a href="https://www.instagram.com/p/C2yYvlxvUA0" target="_blank"><img src="resource/images/sec7-thumb8.png" alt="리빙 아이템" ></a></li>
+                        <li><a href="https://www.instagram.com/p/C2v4B73S9go" target="_blank"><img src="resource/images/sec7-thumb9.png" alt="피너츠 텀블러" ></a></li>
+                        <li><a href="https://www.instagram.com/p/C2rJRmbP-SO" target="_blank"><img src="resource/images/sec7-thumb10.png" alt="리락쿠마&버니콘비니"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 배너 -->
+        <div id="bottom-banner">
+            <div class="container page">
+                <div class="inner">
+                    <div class="txt-box">지금 회원가입하고<br>10,000원 할인쿠폰 받아가세요!</div>
+                    <div class="btn-wrap">
+                        <a href="#">회원가입</a>
+                        <a href="#">로그인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- to top -->
+        <button type="button" class="btn-top">Top</button>
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="container">
+                <div class="inner">
+                    <ul class="foot-menu">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">입점문의</a></li>
+                        <li><a href="#">매장안내</a></li>
+                    </ul>
+
+                    <div class="foot-bottom">
+                        <div class="foot-left">
+                            <p class="foot-logo"><img src="resource/images/logo.png" alt="tenbyten"></p>
+                            <div class="foot-info">
+                                <strong>㈜텐바이텐</strong>
+                                <address>
+                                    <p><span>대표이사 : 홍길동 </span><span> 서울시 종로구 대학로 57 256-586</span></p>
+                                    <p><span>사업자등록번호 : 123-456-7890 </span><span> 통신판매업 신고 : 제 01-1968호</span></p>
+                                    <p><span>전화번호 : 1588-5588 </span><span> Email : cs@design.com</span></p>
+                                    <p><span>개인정보보호책임자 : 홍길동</span></p>
+                                </address>
+                                <p class="copyright">COPYRIGHT &copy; TENBYTEN ALL RIGHTS RESERVED.</p>
+                            </div>
+                        </div>
+    
+                        <div class="foot-sns">
+                            <a href="#"><img src="resource/images/ico-sns-blog.png" alt="naverblog"></a>
+                            <a href="#"><img src="resource/images/ico-sns-kakao.png" alt="kakao"></a>
+                            <a href="#"><img src="resource/images/ico-sns-instagram.png" alt="instagram"></a>
+                            <a href="#"><img src="resource/images/ico-sns-facebook.png" alt="facebook"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- SWIPER SLIDER  -->
+    <script>
+        // 메인슬라이드 --------------------------------
+        const swiper_main = new Swiper('.mainSlide', {            
+            loop: true,
+            centeredSlides: true,   //가운데 배치
+            autoplay: {             //자동재생
+            delay: 2000,            //전환간격
+            disableOnInteraction: true, //사용자가 마우스 클릭 시 자동재생 멈춤
+            },
+
+            pagination: {
+                el: '.mainSlide .swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.mainSlide .swiper-button-next',
+                prevEl: '.mainSlide .swiper-button-prev',
+            },
+        });
+
+        // 메뉴 슬라이드 --------------------------------
+        var swiper_menu = new Swiper(".prdSlide", {
+            loop:true,
+            centeredSlides: true,   //가운데 배치
+            autoplay: {             //자동재생
+            delay: 2000,            //전환간격
+            disableOnInteraction: false, //사용자가 마우스 클릭 시 자동재생 멈춤
+            },
+
+            slidesPerView: 3,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.prd-wrap .swiper-button-next',
+                prevEl: '.prd-wrap .swiper-button-prev',
+            },
+            pagination: {
+                el: ".prdSlide .swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        //슬라이더 클릭 시 애니메이션 멈춤    
+        $('.mainSlide').on('mouseover', function(){
+            swiper_main.autoplay.stop();
+        });
+        $('.mainSlide').on('mouseout', function(){
+            swiper_main.autoplay.start();
+        });
+
+    </script>
+
+    <!-- AOS -->
+    <script> 
+      //  AOS.init(); 
+    </script>
+     
+    <!-- SCROLL ON  -->
+    <script>        
+            $(document).ready(function () {
+                // 클래스가 "scroll_on"인 모든 요소를 선택
+                const $counters = $(".scroll_on");
+
+                // 노출 비율(%)과 애니메이션 반복 여부(true/false)를 설정                
+                //100: 스크롤 했을 때 $counters 컨텐츠가 화면에 100% 노출되면 숫자가 올라감.
+                const exposurePercentage = 20; 
+
+                const loop = true; // 애니메이션 반복 여부를 설정. (true로 설정할 경우, 요소가 화면에서 사라질 때 다시 숨겨집니다.)
+
+                // 윈도우의 스크롤 이벤트를 모니터링.
+                $(window).on('scroll', function () {
+                    // 각 "scroll_on" 클래스를 가진 요소에 대해 반복.
+                    $counters.each(function () {
+                        const $el = $(this);
+
+                        // 요소의 위치 정보를 가져옵니다.
+                        const rect = $el[0].getBoundingClientRect();
+                        const winHeight = window.innerHeight; // 현재 브라우저 창의 높이
+                        const contentHeight = rect.bottom - rect.top; // 요소의 높이
+
+                        // 요소가 화면에 특정 비율만큼 노출될 때 처리.
+                        if (rect.top <= winHeight - (contentHeight * exposurePercentage / 100) && rect.bottom >= (contentHeight * exposurePercentage / 100)) {
+                            $el.addClass('active');
+                        }
+                        // 요소가 화면에서 완전히 사라졌을 때 처리.
+                        if (loop && (rect.bottom <= 0 || rect.top >= window.innerHeight)) {
+                            $el.removeClass('active');
+                        }
+                    });
+                }).scroll();
+            });
+    </script>
+
+    <!-- PAGE SCROLL -->
+    <script> 
+        // 페이지 단위 스크롤 page scroll
+        // const wrap = document.getElementsByClassName('page-wrap')[0]; // 보일 영역
+        // const page = document.getElementsByClassName('page');
+        // let page_no = 0; // 영역 포지션 초기값
+        // const lastPage = page.length - 1; // 마지막 페이지
+
+        // window.addEventListener('wheel', (e) => {
+        //     e.preventDefault();
+        //     if (e.deltaY > 0) {
+        //         page_no++;
+        //     } else if (e.deltaY < 0) {
+        //         page_no--;
+        //     }
+        //     if (page_no < 0) {
+        //         page_no = 0;
+        //     } else if (page_no > lastPage) {
+        //         page_no = lastPage;
+        //     }
+        //     console.log(e.deltaY)
+        //     wrap.style.top = page_no * -100 + 'vh';
+        // }, { passive: false }); // 디폴트 기능 제거 - 스크롤
+    </script> 
+
+    <!-- REMAIN TIME CHECK -->
+    <script>
+        function timeCount(targetDate) {
+            const now = new Date();
+            const endDate = new Date(targetDate);
+            const timeRemaining = endDate - now;
+             
+            if (timeRemaining <= 0) {
+                document.getElementById('countdown').textContent = '시간 초과';
+                return;
+            }
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').textContent = `${hours}:${minutes}:${seconds}`;           
+
+            //슬라이더 ui 업데이트
+            var em = document.querySelector('.timeline span em');
+            em.style.width='100px';
+        }
+
+        // 타겟 날짜 설정 (예: 2024년 12월 31일 23:59:59)
+        const startDate = new Date('2024-05-10T23:59:59').getTime();
+        const targetDate = new Date('2024-05-30T23:59:59').getTime();
+        const totalDate = targetDate - startDate;
+        
+        // 1초마다 업데이트
+        setInterval(() => {
+            timeCount(targetDate);
+        }, 1000);
+    </script>
+</body>
+</html>

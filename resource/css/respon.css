@@ -1,0 +1,390 @@
+
+@media screen and (max-width:1600px){
+    /* 퀵메뉴  */
+    .quick{display: none;}
+}
+
+/* 1024~1230까지 : 넷북 */
+@media screen and (max-width:1230px) {
+    /* .container{background: lime;} */
+
+    /* 공통 */
+    .container .inner{width: 980px;}
+    #header .inner{width: 980px; padding-right:10px;}
+
+    /*================================================
+    main visual
+    ================================================*/
+    #main_visual{margin-top:180px;}
+    #main_visual .mainSlide .swiper-slide img{
+        height:500px; object-fit:cover; object-position: 50% 50%; max-width:1230px;
+    }
+
+    /*================================================
+    section2-세일상품
+    ================================================*/
+    /* product  */
+    #sec2 .list{margin-right: 0; gap:5px;}
+    #sec2 .list li{width:250px;}
+
+    /*================================================
+    section3-베스트 상품
+    ================================================*/
+    #sec3 .prd-wrap{width:900px;}
+    #sec3 .prdSlide .swiper-slide .thumb-box img{width:200px;}
+    #sec3 .prd-wrap .swiper-button-prev{left:-40px;}
+    #sec3 .prd-wrap .swiper-button-next{right:-40px;}
+
+    /*================================================
+    section4-신제품
+    ================================================*/
+    #sec4 .img-deco{top: 200px; right: -250px;}
+    #sec4 .img-deco img{width:400px;}
+    #sec4 .img-box{top:350px; right:20px;}
+
+    /*================================================
+    section5-기획전
+    ================================================*/   
+    #sec5 .list li a .img-box{font-size: 16px;}
+    #sec5 .list li a .txt-box .txt {font-size: 13px;}
+
+    /*================================================
+    section6-notice
+    ================================================*/
+    #sec6 .content {padding-left: 60px;}
+    #sec6 .lft-tit-box{width:39%;}
+    #sec6 .lft-tit-box .txt-wrap p br{display: block;}
+    #sec6 .list{width:59%; margin-left: 2%;}
+
+    /*================================================
+    section7-sns
+    ================================================*/
+    #sec7 .list{width:100%;}
+    #sec7 .list li{width:18%; height:auto;}
+}
+
+/* 태블릿 : 769~1023 */
+@media screen and (max-width:1023px){
+    /* 공통 */
+    /* .container{background: pink;} */
+    .container .inner{width: auto; padding:60px 10px 80px;}
+    #header .inner{width: auto;}
+    #header nav {display: none;}
+
+        /* pc 헤더 숨기기*/
+        #header {display: none;}
+    
+        /* mobile 헤더 보이기  */
+        .mHeader {
+            display: block;
+            position: relative;
+            height: var(--mheader-height);
+        }
+
+        .mHeader .openBt {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 25px;
+        }
+
+        .mHeader .logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: -8px;
+        }
+
+        .mHeader .logo img{width:120px}
+
+        .mMenuArea {
+            display: block;
+            position: fixed;
+            left: -100%; 
+            /* 화면 바깥에 나가있게 하기 */
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+            background: #fff;
+        }
+    
+        .mMenuArea .top {
+            background: var(--main-color);
+            position: relative;
+            height: 100px;
+        }
+    
+        .mMenuArea .top .loginBt {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 26px;
+            font-weight: 500;
+            line-height: 38px;
+        }
+
+        .mMenuArea .top .loginBt span{margin-left: 10px;}
+    
+        .mMenuArea .top .closeBt {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 35px;
+            color:#fff;
+        }    
+        
+        .mMenuArea .links {
+            margin-top: 20px;
+            padding-left: 20px;
+            overflow: hidden;
+        }
+    
+        .mMenuArea .links a {
+            float: left;
+            height: 30px;    
+            padding:0 10px;
+            box-sizing: border-box;
+            position: relative;  
+        }   
+
+        .mMenuArea .links a::before{
+            content:"";
+            position: absolute;
+            left:0;
+            top:0;
+            width: 1px;
+            height:30px;
+            background: #e1e1e1;
+        }
+
+        .mMenuArea .links a:first-child::before{
+            background: none;
+        }
+            
+        /* gnb */
+        .mMenuArea #gnb {
+            float: none;         
+            margin-top: 30px;
+        }
+    
+        /* gnb 1depth */
+        .mMenuArea #gnb .depth1 {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 22px 38px;
+            font-size: 20px;
+            font-weight: 500;
+            border-bottom: 1px solid #e1e1e1;
+        }
+
+        .mMenuArea #gnb .depth1 i{font-size: 20px;}
+        .mMenuArea #gnb .depth1.on i{          
+            transform:scale(1.1) rotate(45deg);
+        }
+
+        /* gnb 2depth hidden */
+        .mMenuArea #gnb .depth2 {
+            display: none;
+            background: #f2f2f2;
+            padding: 10px 30px;
+        }
+    
+        .mMenuArea #gnb .depth2 > li > a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+    /*================================================
+    main visual
+    ================================================*/
+    #main_visual{margin-top:0;}
+    #main_visual .mainSlide .swiper-slide img{
+        height:400px; object-fit:cover; object-position: 50% 50%; max-width:1230px;
+    }
+
+    /*================================================
+    section2-세일상품
+    ================================================*/
+    /* title */
+    #sec2 .left-tit-box{flex-direction: row; align-items:end; gap:50px;}
+    
+    /* product  */
+    #sec2 .list{float: none; clear: both; margin-top: 200px; gap:30px; }
+    #sec2 .list li{width:230px; text-align: center; }
+
+    /*================================================
+    section3-베스트 상품
+    ================================================*/
+    #sec3 .prd-wrap{width:900px;}
+    #sec3 .prd-wrap .swiper-button-prev{display: none;}
+    #sec3 .prd-wrap .swiper-button-next{display: none;}
+    
+    /*================================================
+    section4-신규 상품
+    ================================================*/
+    #sec4 .inner{padding: 60px 40px 250px 10px;}
+    #sec4 .img-deco{top:350px}
+    #sec4 .img-deco img{width:350px;}
+    #sec4 .img-box{top:450px;}
+    #sec4 .img-box img{width:500px}
+
+    /*================================================
+    section5-기획전
+    ================================================*/   
+    #sec5 .list li a .txt-box .tit {font-size: 16px;}
+
+    #sec6 .container{padding:0;}
+    
+    /*================================================
+    section7-sns
+    ================================================*/    
+    #sec7 .list{width:680px; height:310px; overflow: hidden;}
+    #sec7 .list li{width:162px; height:auto;}
+
+    /*================================================
+    푸터
+    ================================================*/
+    #footer .foot-bottom .foot-left{display: flex; flex-direction: column; gap:20px;}
+}
+
+/* 모바일 451~768*/
+@media screen and (max-width:768px){
+    /* .container{background:skyblue;} */
+    .container .inner .tit-box h2{font-size:45px;}
+
+    #header .util{justify-content: center; flex-direction:column; margin-bottom: 20px;}
+    #header .search-form{margin-left: 0; margin-top: 20px;}
+
+    /*================================================
+    main visual
+    ================================================*/    
+    #main_visual .mainSlide .swiper-slide img{
+        height:300px; object-fit:cover; object-position: 40% 50%; 
+    }
+
+    /*================================================
+    section1-브랜드 스토리
+    ================================================*/
+    #sec1 .img-box .title_img{width:450px;}
+    #sec1 .tit-box p br:first-child{display: block;}
+
+    /*================================================
+    section2-세일상품
+    ================================================*/
+    #sec2 .list li{width:220px;}
+    #sec2 .list li:last-child{display: none;}
+    #sec2 .list li .img-box{width:200px; height:200px;}
+
+    /*================================================
+    section4-신제품
+    ================================================*/
+    #sec4{height:920px; }
+    #sec4 .inner{padding:60px 10px 360px 10px; height:100%;}
+    #sec4 .txt-box .txt-wrap strong{font-size: 35px;}
+    #sec4 .img-deco{top:480px; right: -320px;}
+    #sec4 .img-deco img{width:300px;}
+    #sec4 .img-box{top:550px}
+    #sec4 .img-box img{width:400px}
+
+    /*================================================
+    section5-기획전
+    ================================================*/   
+    #sec5 .list li{width: 100%;}
+    #sec5 .list li a .txt-box .tit {font-size: 15px;}
+
+    /*================================================
+    section6-notice
+    ================================================*/
+    #sec6 .content {padding-left: 10px;}
+    #sec6 .lft-tit-box{width:100%;}
+    #sec6 .lft-tit-box .txt-wrap p br{display: none;}
+    #sec6 .list{width:100%; margin-left:0; margin-top:20px;}
+
+    /*================================================
+    section7-sns
+    ================================================*/    
+    #sec7 .list{width:463px; height:270px;}
+    #sec7 .list li{width:142px;}
+
+    /*================================================
+    하단 배너
+    ================================================*/  
+    #bottom-banner .txt-box{font-size: 16px;}
+    #bottom-banner .btn-wrap a {width:90px; height:36px; line-height: 36px; font-size: 16px;}
+
+    /*================================================
+    푸터
+    ================================================*/ 
+    #footer .foot-menu li{padding:3px;}
+    #footer .foot-menu li + li{margin-left: 1px;}
+    #footer .foot-menu li a{font-size: 15px;}
+    #footer .foot-bottom{flex-direction: column; gap:35px;}
+    #footer .foot-info address{font-size: 15px;}
+    #footer .foot-info .copyright{font-size: 15px;}
+}
+
+/* 해상도 낮은 모바일 */
+@media screen and (max-width:450px){
+    /* .container{background: blue;} */
+    /*================================================
+    main visual
+    ================================================*/    
+    #main_visual .mainSlide .swiper-slide img{
+        height:250px; object-fit:cover; object-position: 35% 50%; 
+    }
+
+    /*================================================
+    section1-브랜드 스토리
+    ================================================*/
+    #sec1 .img-box .title_img{width:350px;}
+    #sec1 .tit-box h2{font-size: 20px;}
+    #sec1 .tit-box p{font-size: 16px;}
+
+    /*================================================
+    section2-세일상품
+    ================================================*/
+    #sec2 .left-tit-box{width:100%; gap:0; justify-content: space-between; margin-bottom: 50px;}
+    #sec2 .left-tit-box .remain_time .timeline{width:150px}
+    #sec2 .list{margin-top: 200px; flex-direction: column; align-items: center; gap:42px;}
+    #sec2 .list li {width:250px;}
+    #sec2 .list li .img-box{width:250px; height:auto;}
+
+    #sec4 .txt-box .txt-wrap strong{font-size: 30px;}
+    
+    #sec6 .list time {font-size: 18px;}    
+    #sec6 .list a {font-size: 18px;}
+
+    /*================================================
+    section7-sns
+    ================================================*/
+    #sec7 .list{width:98%; height:auto; gap:5px; }
+    #sec7 .list li{width:32%; margin-bottom: 5px; }
+    #sec7 .list li:last-child{display: none;}
+
+    /*================================================
+    하단 배너
+    ================================================*/  
+    #bottom-banner .inner{flex-direction:column; justify-content: start; align-items: start;}
+    #bottom-banner .btn-wrap{margin-top: 20px;}
+
+    /*================================================
+    푸터
+    ================================================*/ 
+    #footer .foot-info address p span{
+        display: block;
+    }
+    #footer .foot-info address p span:nth-child(2)::before{
+        content:"";
+        display: block;
+    } 
+    #footer .foot-info .copyright{font-size: 14px;}
+
+    .btn-top{right:10px;}
+}
